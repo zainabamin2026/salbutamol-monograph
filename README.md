@@ -491,7 +491,8 @@ alt="Salbutamol chemical structure" class="chemical-img">
             <div class="card-content">
                 <p>The β2-adreneceptor agonist binds to the β2 receptor, which activates adenyl cyclase, resulting in the conversion of ATP to cyclic AMP (cAMP). This promotes bronchodilation and relieves symptoms experienced during an acute asthma episode.</p>
                 
-                <img src="media/image3.png" alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <img src="https://i0.wp.com/www.memory-pharm.com/wp-content/uploads/2021/06/27-15.png?fit=1024%2C576&ssl=1" 
+                alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin: 20px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             </div>
         </section>
         
@@ -1012,9 +1013,7 @@ alt="How to use inhaler" style="max-width: 100%; display: block; margin: 15px au
             <h3>Salbutamol Information</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/seoaruka26g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </div>                        </div>
-                    </div>
-                </div>
+    </div>           
             </div>
         </section>
         
