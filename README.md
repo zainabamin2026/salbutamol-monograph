@@ -318,17 +318,10 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .video-placeholder {
+        .video-wrapper iframe {
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, var(--primary-light), #2c3e50);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 20px;
+            border: none;
         }
         
         .urdu-link {
@@ -395,6 +388,10 @@
             .title-container h1 {
                 font-size: 1.8rem;
             }
+
+            .video-container {
+                flex-direction: column;
+            }
         }
         
         /* Animation classes */
@@ -441,22 +438,22 @@
     <!-- Navigation Buttons -->
     <nav class="section-nav">
         <div class="nav-buttons">
-            <button class="nav-button active"><i class="fas fa-info-circle"></i> Overview</button>
-            <button class="nav-button"><i class="fas fa-capsules"></i> Mechanism</button>
-            <button class="nav-button"><i class="fas fa-list-check"></i> Indications</button>
-            <button class="nav-button"><i class="fas fa-syringe"></i> Dosage</button>
-            <button class="nav-button"><i class="fas fa-chart-line"></i> Pharmacokinetics</button>
-            <button class="nav-button"><i class="fas fa-exclamation-triangle"></i> Side Effects</button>
-            <button class="nav-button"><i class="fas fa-pills"></i> Interactions</button>
-            <button class="nav-button"><i class="fas fa-baby"></i> Pregnancy</button>
-            <button class="nav-button"><i class="fas fa-tablets"></i> Brands</button>
+            <button class="nav-button active" data-target="overview"><i class="fas fa-info-circle"></i> Overview</button>
+            <button class="nav-button" data-target="mechanism"><i class="fas fa-capsules"></i> Mechanism</button>
+            <button class="nav-button" data-target="indications"><i class="fas fa-list-check"></i> Indications</button>
+            <button class="nav-button" data-target="dosage"><i class="fas fa-syringe"></i> Dosage</button>
+            <button class="nav-button" data-target="pharmacokinetics"><i class="fas fa-chart-line"></i> Pharmacokinetics</button>
+            <button class="nav-button" data-target="side-effects"><i class="fas fa-exclamation-triangle"></i> Side Effects</button>
+            <button class="nav-button" data-target="interactions"><i class="fas fa-pills"></i> Interactions</button>
+            <button class="nav-button" data-target="pregnancy"><i class="fas fa-baby"></i> Pregnancy</button>
+            <button class="nav-button" data-target="brands"><i class="fas fa-tablets"></i> Brands</button>
         </div>
     </nav>
     
     <!-- Main Content -->
     <main class="main-content">
         <!-- Overview Card -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="overview">
             <div class="card-header">
                 <i class="fas fa-info-circle"></i>
                 <h2>Drug Overview</h2>
@@ -482,7 +479,7 @@ alt="Salbutamol chemical structure" class="chemical-img">
         </section>
         
         <!-- Mechanism of Action -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="mechanism">
             <div class="card-header">
                 <i class="fas fa-capsules"></i>
                 <h2>Mechanism of Action</h2>
@@ -496,7 +493,7 @@ alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin
         </section>
         
         <!-- Indications -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="indications">
             <div class="card-header">
                 <i class="fas fa-list-check"></i>
                 <h2>Indications</h2>
@@ -513,7 +510,7 @@ alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin
         </section>
         
         <!-- Routes & Dosage -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="dosage">
             <div class="card-header">
                 <i class="fas fa-syringe"></i>
                 <h2>Routes & Dosage</h2>
@@ -606,7 +603,7 @@ alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin
         </section>
         
         <!-- Pharmacokinetic Profile -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="pharmacokinetics">
             <div class="card-header">
                 <i class="fas fa-chart-line"></i>
                 <h2>Pharmacokinetic Profile</h2>
@@ -670,7 +667,7 @@ alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin
         </section>
         
         <!-- Side Effects -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="side-effects">
             <div class="card-header">
                 <i class="fas fa-exclamation-triangle"></i>
                 <h2>Side Effects</h2>
@@ -761,7 +758,7 @@ alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin
         </section>
         
         <!-- Drug Interactions -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="interactions">
             <div class="card-header">
                 <i class="fas fa-pills"></i>
                 <h2>Drug Interactions</h2>
@@ -809,7 +806,7 @@ alt="Mechanism of action diagram" style="max-width: 100%; display: block; margin
         </section>
         
         <!-- Use in Pregnancy -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="pregnancy">
             <div class="card-header">
                 <i class="fas fa-baby"></i>
                 <h2>Use in Pregnancy & Breastfeeding</h2>
@@ -1003,20 +1000,20 @@ alt="How to use inhaler" style="max-width: 100%; display: block; margin: 15px au
                         <i class="fas fa-globe-asia"></i> میٹرڈ ڈوز انہیلر (ایم ڈی آئی) کا سپیسر کے ساتھ استعمال
                     </a>
                     
-                     <div class="video-container">
-            <h3>How to Use Inhaler</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/doppxjlq40w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        
-        <div class="video-container">
-            <h3>Salbutamol Information</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/seoaruka26g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>               
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/doppxjlq40w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/seoaruka26g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <!-- Brands -->
-        <section class="card fade-in">
+        <section class="card fade-in" id="brands">
             <div class="card-header">
                 <i class="fas fa-tags"></i>
                 <h2>Commonly Available Brands in Pakistan</h2>
@@ -1125,9 +1122,14 @@ alt="How to use inhaler" style="max-width: 100%; display: block; margin: 15px au
                     navButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // In a real implementation, this would scroll to the section
-                    // For this demo, we'll just show an alert
-                    alert(`Navigating to ${this.textContent.trim()} section...`);
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 });
             });
         });
